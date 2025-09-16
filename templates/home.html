@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full screen background image */
+        .hero {
+            background: url('https://luxhabitat.ae/resizedimages/1440w/article/1109/source/7bf0b60acddf44d871a53bae39caa468.jpeg') no-repeat center center/cover;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        /* Transparent nav bar */
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 50px;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+        }
+
+        /* Search bar container */
+        .search-container {
+            display: flex;
+            margin-top: 20px;
+            max-width: 600px;
+            width: 90%;
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 1em;
+        }
+
+        .search-container button {
+            padding: 15px 25px;
+            background-color: #5b2c6f;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .search-container button:hover {
+            background-color: #7d3c98;
+            transform: translateY(-2px);
+        }
+
+        .cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+    flex-wrap: wrap; /* Optional: makes cards wrap on smaller screens */
+}
+
+.card {
+    background-color: rgba(255,255,255,0.9);
+    padding: 30px;          /* increased padding for spacious look */
+    border-radius: 10px;
+    width: 350px;           /* increased width */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #5b2c6f;
+    margin-bottom: 15px;
+    font-size: 1.4em;       /* increased font size */
+}
+
+.card p {
+    color: #333;
+    font-size: 1.05em;      /* slightly larger text */
+    line-height: 1.5em;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Main heading -->
+        <h1>Predicting House Prices Made Easy</h1>
+
+        <!-- Search / Predict Form -->
+        <form class="search-container" action="/predict_page" method="get">
+            <input type="text" placeholder="Property Type" name="property_type">
+            <input type="text" placeholder="Location" name="location">
+            <button type="submit">Predict</button>
+        </form>
+
+        <!-- About & Contact Cards -->
+        <div class="cards">
+            <div class="card" id="about">
+                <h3>About Us</h3>
+                <p>We make it easy for anyone to find out the value of their home. With a simple and intuitive interface, our app provides quick and reliable house price estimates, helping users make informed decisions effortlessly.</p>
+            </div>
+            <div class="card" id="contact">
+                <h3>Contact Us</h3>
+                <p>contact us at anytime just email us Email: house.prediction@email.com</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
